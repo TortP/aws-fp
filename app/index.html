@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW Final Project</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --border: #374151;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #020617);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 28px 16px 48px;
+    }
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+    }
+    .badge {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 10px;
+      border: 1px solid #166534;
+      background: rgba(34, 197, 94, 0.12);
+      color: #86efac;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 14px;
+    }
+    .card {
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .footer {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    code {
+      background: #0b1220;
+      border: 1px solid #1f2937;
+      border-radius: 6px;
+      padding: 2px 6px;
+      color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>AWS Final Project Template</h1>
+      <p class="subtitle">Демо-сторінка для фінального проєкту, задеплоєна в AWS через ECS Fargate.</p>
+      <div class="badge">Status: RUNNING</div>
+      <div class="grid">
+        <article class="card">
+          <h3>Compute</h3>
+          <p>Amazon ECS (Fargate), сервіс за ALB, образ з ECR.</p>
+        </article>
+        <article class="card">
+          <h3>Database</h3>
+          <p>Amazon RDS PostgreSQL у private subnets.</p>
+        </article>
+        <article class="card">
+          <h3>Observability</h3>
+          <p>CloudWatch Logs + CloudWatch Alarm + SNS alerts.</p>
+        </article>
+        <article class="card">
+          <h3>Cost Control</h3>
+          <p>AWS Budget + Cost Explorer аналіз витрат.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="hero">
+      <h1 style="font-size:22px">Технічна довідка</h1>
+      <p class="subtitle">
+        Ця сторінка — шаблон UI, щоб апка не була порожньою. Версію можна змінювати через
+        <code>app/index.html</code> та перевикладати образ у ECR.
+      </p>
+    </section>
+
+    <p class="footer">HWFP • ECS Fargate • ALB • RDS • CloudWatch • Auto Scaling • Budgets</p>
+  </main>
+</body>
+</html>
